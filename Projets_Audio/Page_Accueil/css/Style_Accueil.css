@@ -1,0 +1,136 @@
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #8ba797, #b6d7c4);
+    color: white;
+}
+#audio-list {
+    width: 25%;
+    overflow-y: auto;
+    border-right: 2px solid #444;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease;
+}
+#audio-player {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.audio-item {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #555;
+    transition: background 0.3s;
+}
+.audio-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+.controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+button {
+    background: #ff9800;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+button:hover {
+    background: #e68900;
+}
+#toggle-list {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 15px;
+    background: #ff5722;
+    border: none;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+#toggle-list:hover {
+    background: #e64a19;
+}
+audio {
+    width: 80%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.left-panel {
+    width: 30%;
+}
+
+.right-panel {
+    width: 70%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Masquer les contrôles par défaut */
+audio {
+    display: none;
+}
+
+/* Container de la barre de progression */
+.audio-container {
+    width: 88%;
+    max-width: 600px; /* Ajustez selon la taille souhaitée */
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Style de la barre de progression */
+.track-bar {
+    width: 100%;
+}
+
+/* Barre de progression */
+input[type="range"] {
+    width: 100%;
+    height: 6px;
+    background: #ccc;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+}
+
+/* Apparence de la barre quand elle est active */
+input[type="range"]::-webkit-slider-runnable-track {
+    background: #000000;
+    border-radius: 3px;
+    height: 6px;
+}
+
+/* Apparence de la barre quand la souris est dessus */
+input[type="range"]:hover {
+    background: #b92929;
+}
+
